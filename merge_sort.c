@@ -13,7 +13,6 @@ void merge(int *a,int low,int mid,int high)
 {
    int n1 = mid-low+1;
    int n2 = high-low;
-   int n = high - low + 1;
    int i,j,k;
    int *left = (int*)malloc((n1+1)*sizeof(int));
    int *right = (int*)malloc((n2+1)*sizeof(int));
@@ -25,7 +24,7 @@ void merge(int *a,int low,int mid,int high)
   right[n2] = INT_MAX;
   i=0;
   j=0;
-   for(k=low;k<n;k++)
+   for(k=low;k<=high;k++)
    {
     if(left[i]<=right[j])
       {
