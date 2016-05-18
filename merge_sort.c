@@ -63,8 +63,11 @@ int main()
      printf("Enter %dth element:",i+1);
      scanf("%d",&a[i]);
    }
+
  merge_sort(a,0,n-1);
+ 
   printf("Sorted array is:\n");
+
  for(i=0;i<n;i++)
 {
   printf("%d\n",a[i]);
