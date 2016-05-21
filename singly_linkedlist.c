@@ -12,8 +12,7 @@ void insert(node *a,int x)
  node *b = (node*)malloc(sizeof(node));
  b->next=NULL;
  b->key=x;
- while(a->next!=NULL)
-   a=a->next;
+ b->next=a->next;
  a->next=b;
 }
 
