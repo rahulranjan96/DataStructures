@@ -15,11 +15,18 @@ void insert(node *a,int key)
  b->prev=NULL;
  b->next=NULL;
  b->key=key;
- while(a->next!=NULL)
-   a=a->next;
- b->prev=a;
- a->next=b;
- b->next=NULL;
+ if(a->next==NULL)
+ {
+   a->next=b;
+   b->prev=a;
+ }
+else
+ {
+  a->next->prev=b;
+  b->next=a->next;
+  a->next=b;
+  b->prev=a;
+ }
 }
 
 void print(node *a)
