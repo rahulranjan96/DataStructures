@@ -15,7 +15,7 @@ void counting_sort(int *a,int n,int k)
    c[i]+=c[i-1];
   for(i=n-1;i>=0;i--)
    {
-    b[c[a[i]]]=a[i];
+    b[c[a[i]]-1]=a[i];
       c[a[i]]--;
    }
  for(i=0;i<n;i++)
