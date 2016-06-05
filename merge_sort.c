@@ -2,17 +2,10 @@
 #include<stdio.h>
 #include<limits.h>
 
-void swap(int *a,int *b)
-{
-   int temp = *a;
-   *a = *b;
-   *b = temp;
-}
-
 void merge(int *a,int low,int mid,int high)
 {
    int n1 = mid-low+1;
-   int n2 = high-low;
+   int n2 = high-mid;
    int i,j,k;
    int *left = (int*)malloc((n1+1)*sizeof(int));
    int *right = (int*)malloc((n2+1)*sizeof(int));
