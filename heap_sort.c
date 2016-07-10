@@ -1,7 +1,12 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-
+//For array starting with index 0 to n-1
+//Pass n-1 in heapsort function in main function
+//Do all the replacement in for loops
+//left child=2*i+1
+//right child=2*i+2
+//parent=(i-1)/2
 void swap(int *a,int *b)
 {
    int temp = *a;
